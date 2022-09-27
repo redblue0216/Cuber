@@ -1,0 +1,3 @@
+cuber_scheduler: tmp_scheduler
+ray_host: 127.0.0.1
+ray_port: '10001'

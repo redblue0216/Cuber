@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-cn" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cuber.actuator package &mdash; cuber 0.1 文档</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="cuber.manager package" href="cuber.manager.html" />
+    <link rel="prev" title="cuber package" href="cuber.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> cuber
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">code</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="cuber.html">cuber package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="cuber.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">cuber.actuator package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cuber.manager.html">cuber.manager package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cuber.model.html">cuber.model package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cuber.runner.html">cuber.runner package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cuber.tool.html">cuber.tool package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cuber.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cuber.html#module-cuber.interface">cuber.interface module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cuber.html#module-cuber">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">cuber</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">code</a> &raquo;</li>
+          <li><a href="cuber.html">cuber package</a> &raquo;</li>
+      <li>cuber.actuator package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/cuber.actuator.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cuber-actuator-package">
+<h1>cuber.actuator package<a class="headerlink" href="#cuber-actuator-package" title="永久链接至标题">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="module-cuber.actuator.actuator_meta">
+<span id="cuber-actuator-actuator-meta-module"></span><h2>cuber.actuator.actuator_meta module<a class="headerlink" href="#module-cuber.actuator.actuator_meta" title="永久链接至标题">¶</a></h2>
+<section id="id1">
+<h3>模块介绍<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
+<p>这是一个集成学习计算图控制元类，主要功能生成集成学习计算图控制类，主要技术__prepare__,__new__</p>
+<p>设计模式：</p>
+<blockquote>
+<div><p>（1）  无</p>
+</div></blockquote>
+<p>关键点：</p>
+<blockquote>
+<div><p>（1）__prepare__</p>
+<p>（2）__new__</p>
+</div></blockquote>
+<p>主要功能：</p>
+<blockquote>
+<div><p>（1）管理集成学习控制类的创建</p>
+</div></blockquote>
+</section>
+<section id="id2">
+<h3>使用示例<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id3">
+<h3>类说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_meta.ControllerMeta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cuber.actuator.actuator_meta.</span></span><span class="sig-name descname"><span class="pre">ControllerMeta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bases</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrs_dict</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_meta.ControllerMeta" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个集成学习计算图控制元类，主要功能管理集成学习计算图控制类的生成，主要技术__prepare__,__new__</p>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_meta.ControllerMeta.instance">
+<span class="sig-name descname"><span class="pre">instance</span></span><a class="headerlink" href="#cuber.actuator.actuator_meta.ControllerMeta.instance" title="永久链接至目标">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#cuber.actuator.actuator_realization.Controller" title="cuber.actuator.actuator_realization.Controller"><code class="xref py py-class docutils literal notranslate"><span class="pre">cuber.actuator.actuator_realization.Controller</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="module-cuber.actuator.actuator_realization">
+<span id="cuber-actuator-actuator-realization-module"></span><h2>cuber.actuator.actuator_realization module<a class="headerlink" href="#module-cuber.actuator.actuator_realization" title="永久链接至标题">¶</a></h2>
+<section id="id4">
+<h3>模块介绍<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>这是一个集成学习计算图控制类，主要功能提供计算图DAG的管理，计算引擎管理和调度管理。主要技术基于Networkx的DAG技术，基于Ray的计算环境，装饰器技术和运算符重载</p>
+<p>设计模式：</p>
+<blockquote>
+<div><p>（1）  无</p>
+</div></blockquote>
+<p>关键点：</p>
+<blockquote>
+<div><p>（1）装饰器</p>
+<p>（2）运算符重载</p>
+</div></blockquote>
+<p>主要功能：</p>
+<blockquote>
+<div><p>（1）计算图管理</p>
+<p>（2）计算引擎管理</p>
+<p>（3）调度管理</p>
+</div></blockquote>
+</section>
+<section id="id5">
+<h3>使用示例<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id6">
+<h3>类说明<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cuber.actuator.actuator_realization.</span></span><span class="sig-name descname"><span class="pre">Controller</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">runner</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scheduler</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个集成学习计算图控制类，主要功能提供计算图DAG的管理，计算引擎管理和调度管理。主要技术基于Networkx的DAG技术，基于Ray的计算环境，装饰器技术和运算符重载</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.add_edge">
+<span class="sig-name descname"><span class="pre">add_edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'single'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_node_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_node_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_dict_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.add_edge" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个添加边的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数:</dt><dd><p>start_node_name (str): 开始节点名称
+end_node_name (str): 结束节点名称
+data_obj (object): 节点数据对象
+method (str): 添加方式
+data_dict_list (list): 数据字典列表</p>
+</dd>
+<dt>返回:</dt><dd><p>result (str): 返回结果文本</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.add_node">
+<span class="sig-name descname"><span class="pre">add_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'single'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_dict_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.add_node" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个添加节点的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>node_name (str): 节点名称
+data_obj (obj): 节点数据对象
+method (str): 添加方式
+data_dict_list (list): 数据字典列表</p>
+</dd>
+<dt>返回:</dt><dd><p>result (str): 返回结果文本</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.dispath_algorithm_with_kahn">
+<span class="sig-name descname"><span class="pre">dispath_algorithm_with_kahn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.dispath_algorithm_with_kahn" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个使用Kahn算法的调度方法，此处使用yield技术返回一个生成器</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>无</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.draw">
+<span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.draw" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个展示图例的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>无</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.execute">
+<span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'kahn'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dispath_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'kahn'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exec_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ray'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.execute" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个执行算法DAG的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>cuber_controller (object): 目标控制器,此处就为实例本身self
+init_method (str): 初始化方法
+dispath_method (str): 调度方法
+exec_method (str): 运行方法</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 返回结果文本</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.execute_algorithm_with_ray">
+<span class="sig-name descname"><span class="pre">execute_algorithm_with_ray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">run_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.execute_algorithm_with_ray" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个使用ray计算引擎的执行方法,包括收集参数，执行，推送结果三大步骤</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>run_list (list): 单个运行任务列表</p>
+</dd>
+<dt>返回：</dt><dd><p>无</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.get_edge_attributes">
+<span class="sig-name descname"><span class="pre">get_edge_attributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_node_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_node_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.get_edge_attributes" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个获取边属性的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>start_node_name (str): 开始节点名称
+end_node_name (str): 结束节点名称
+attr_name (str): 属性名称</p>
+</dd>
+<dt>返回：</dt><dd><p>attr_data (object): 属性数据</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.get_edge_neighbor">
+<span class="sig-name descname"><span class="pre">get_edge_neighbor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.get_edge_neighbor" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个访问目标节点邻居边的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>node_name (str): 节点名称
+direction (str): 访问方向</p>
+</dd>
+<dt>返回：</dt><dd><p>edges_list (list): 边列表</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.get_function_obj">
+<span class="sig-name descname"><span class="pre">get_function_obj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.get_function_obj" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个获取函数对象的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>function_name (str): 函数名称</p>
+</dd>
+<dt>返回：</dt><dd><p>function_obj (object): 函数对象</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.get_graph_obj">
+<span class="sig-name descname"><span class="pre">get_graph_obj</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.get_graph_obj" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个获取图对象的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>graph_obj (object): 图对象，基于networkx技术</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.get_node_attributes">
+<span class="sig-name descname"><span class="pre">get_node_attributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.get_node_attributes" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个获取节点属性的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>node_name (str): 节点名称
+attr_name (str): 属性名称</p>
+</dd>
+<dt>返回：</dt><dd><p>atrr_data (object): 属性数据</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.get_node_neighbor">
+<span class="sig-name descname"><span class="pre">get_node_neighbor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.get_node_neighbor" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个访问目标节点邻居节点的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>node_name (str): 节点名称
+direction (str): 访问方向</p>
+</dd>
+<dt>返回：</dt><dd><p>nodes_list (list): 节点列表</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.init_job_queue_with_kahn">
+<span class="sig-name descname"><span class="pre">init_job_queue_with_kahn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.init_job_queue_with_kahn" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个初始化优先级调度队列的方法,使用kahn算法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 返回结果文本</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.kahnclassification_algorithm">
+<span class="sig-name descname"><span class="pre">kahnclassification_algorithm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.kahnclassification_algorithm" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个DAG图分层算法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>kahnclassification_list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.manager">
+<span class="sig-name descname"><span class="pre">manager</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'name':</span> <span class="pre">'DAG',</span> <span class="pre">'obj':</span> <span class="pre">&lt;networkx.classes.digraph.DiGraph</span> <span class="pre">object&gt;,</span> <span class="pre">'remarks':</span> <span class="pre">'no</span> <span class="pre">params'}</span></em><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.manager" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.modify_edge">
+<span class="sig-name descname"><span class="pre">modify_edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_node_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_node_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.modify_edge" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个修改边的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数:</dt><dd><p>start_node_name (str): 开始节点名称
+end_node_name (str): 结束节点名称
+data_obj (object): 节点数据对象</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 返回结果文本</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.modify_node">
+<span class="sig-name descname"><span class="pre">modify_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.modify_node" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个修改节点的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数:</dt><dd><p>node_name (str): 节点名称
+data_obj (object): 节点数据对象</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 返回结果文本</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.query_edge">
+<span class="sig-name descname"><span class="pre">query_edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_node_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_node_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.query_edge" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个查询图边的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>start_node_name (str): 开始节点名称
+end_node_name (str): 结束节点名称</p>
+</dd>
+<dt>返回：</dt><dd><p>data_dict (str): 数据字典</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.query_node">
+<span class="sig-name descname"><span class="pre">query_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.query_node" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个查询图节点的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>node_name (str): 节点名称</p>
+</dd>
+<dt>返回：</dt><dd><p>data_dict (dict): 数据字典</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.register">
+<span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">controller_obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.register" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个注册函数的装饰器方法，使用带参数的装饰器函数技术。</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>controller_obj (object): 控制器对象</p>
+</dd>
+<dt>返回：</dt><dd><p>decorate (function): 装饰器函数对象</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.remove_edge">
+<span class="sig-name descname"><span class="pre">remove_edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'single'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_node_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_node_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edges_name_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.remove_edge" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个删除边的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>method (str): 删除方式
+edge_name (str): 边名称
+edges_name_list (list): 边名称列表</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 返回结果文本</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.remove_node">
+<span class="sig-name descname"><span class="pre">remove_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'single'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodes_name_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.remove_node" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个删除节点的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>method (str): 删除方式
+node_name (str): 节点名称
+nodes_name_list (list): 节点名称列表</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 返回结果文本</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.show_edges">
+<span class="sig-name descname"><span class="pre">show_edges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.show_edges" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个展示图管理器的边情况的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>show_edges_list (List): 展示边列表</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.show_nodes">
+<span class="sig-name descname"><span class="pre">show_nodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.show_nodes" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个展示图管理器的节点情况的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>show_nodes_list (List): 展示节点列表</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cuber.actuator.actuator_realization.Controller.toposort_algorithm">
+<span class="sig-name descname"><span class="pre">toposort_algorithm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cuber.actuator.actuator_realization.Controller.toposort_algorithm" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个拓扑排序的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>toposort_list (list): 拓扑排序列表</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="module-cuber.actuator">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-cuber.actuator" title="永久链接至标题">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="cuber.html" class="btn btn-neutral float-left" title="cuber package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cuber.manager.html" class="btn btn-neutral float-right" title="cuber.manager package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, shihua.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

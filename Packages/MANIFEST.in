@@ -1,0 +1,2 @@
+include cuber/doc/README.mdown
+graft cuber/test
