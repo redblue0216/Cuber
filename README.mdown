@@ -1,5 +1,5 @@
 # Cuber
-![shields_version](static/shields_version.svg)  ![shields_license](static/shields_license.svg)   ![shields_author](static/shields_author.svg)  ![shiedls_python](static/shields_python.svg)
+![shields_version](static/shields_version.png)  ![shields_license](static/shields_license.png)   ![shields_author](static/shields_author.png)  ![shiedls_python](static/shields_python.png)
 
 ![cuber_avatar](static/Cuber_avatar.JPG)
 
