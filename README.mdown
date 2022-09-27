@@ -1,5 +1,5 @@
 # Cuber
-![shields_version](static/shields_version.png)  ![shields_license](Static/shields_license.png)   ![shields_author](Static/shields_author.png)  ![shiedls_python](Static/shields_python.png)
+![shields_version](static/shields_version.png)  ![shields_license](static/shields_license.png)   ![shields_author](static/shields_author.png)  ![shiedls_python](static/shields_python.png)
 
 ## 介绍
 + cuber是一个集成学习框架，主要用于各种集成学习算法的开发，具有灵活动态可配置的特点。cuber主要由三大模块组成，控制引擎、计算引擎和调度引擎。控制引擎依托于networkx的有向无环图技术，需要以计算引擎和调度引擎为基础，运行时加载。计算引擎支持Ray,Dask；调度引擎支持Kahn算法。
